@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --width-image: 55rem;
+  font-size: 62.5%;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: url("https://images.unsplash.com/photo-1515041219749-89347f83291a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+  background-size: cover;
+}
+
+.container::before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  background: rgb(55, 54, 89, .6);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.container section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-card {
+  border-radius: .3rem;
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: animate 1.5s forwards;
+}
+
+.container-card h3 {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #F2D57E;
+  margin-bottom: 2.5rem;
+  cursor: default;
+}
+
+.container-image {
+  position: relative;
+  max-width: var(--width-image);
+  max-height: calc(var(--width-image) - 10rem);
+  width: 100%;
+  height: 100%;
+  border-radius: .4rem;
+  margin-bottom: 3rem;
+
+  box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .5);
+
+}
+
+.container-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: .4rem;
+
+  filter: brightness(.65);
+}
+
+star-rater {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 5rem;
+  background: transparent;
+  transition: all .30s ease-in;
+  opacity: 0;
+
+}
+
+star-rater:hover {
+  opacity: 1;
+  background: rgba(85, 85, 85, 0.315);
+
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-800rem);
+    opacity: .4;
+    position: absolute;
+  }
+
+  25% {
+    transform: translateY(2%);
+    position: absolute;
+    opacity: .8;
+
+
+  }
+
+  50% {
+    transform: translateY(10%);
+    position: absolute;
+    opacity: .7;
+
+
+  }
+
+  75% {
+    transform: translateY(-5rem);
+    position: absolute;
+    opacity: .6;
+
+  }
+
+  100% {
+    transform: translateY(0rem);
+    position: relative;
+
+  }
+}

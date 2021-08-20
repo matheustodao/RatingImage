@@ -44,9 +44,11 @@ class StarRater extends HTMLElement {
     this.stars.forEach((star) => {
       star.style.color = (
         this.currentRatingValue >= star.dataset.value
-          ? '#0f0'
-          : '#555648'
+          ? '#f0fa4f'
+          : '#eee'
       )
+
+      star.style.transition = 'all .25s ease';
     })
   }
 
@@ -69,8 +71,7 @@ class StarRater extends HTMLElement {
     style.textContent = `
       .star {
         cursor: pointer;
-        color: #95a5a6;
-        font-size: 24px;
+        font-size: 5rem;
       }
     `;
 
