@@ -69,6 +69,8 @@ class StarRater extends HTMLElement {
     style.textContent = `
       .star {
         cursor: pointer;
+        color: #95a5a6;
+        font-size: 24px;
       }
     `;
 
